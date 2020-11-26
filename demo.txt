@@ -11,6 +11,8 @@ git reset --hard 版本号
 
 放弃工作区的修改：
 git checkout -- 文件名
+一种是修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+一种是已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
 
 撤销暂存区的修改：
 git reset HEAD 文件名
@@ -19,7 +21,7 @@ git reset HEAD 文件名
 git rm 文件名
 git commit -m "remove xxx"  同步到版本库
 
-误删的文件从版本库
+误删的文件从版本库恢复
 git checkout -- 文件名
 git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”
 
@@ -37,7 +39,7 @@ git checkout 分支名
 git switch 分支名 （新版本 建议使用）
 
 创建分支并切换到新创建的分支上
-git checkout -b dev
+git checkout -b 分支名
 git switch -c 分支名（新版本 建议使用）
 
 删除分支:
@@ -47,5 +49,16 @@ git branch -d 分支名
 git branch
 
 git merge命令用于合并指定分支到当前分支
+
+暂存工作现场：
+git stash
+查看暂存工作现场列表：
+git stash list
+恢复工作现场并把stash删除
+git stash pop
+恢复指定的stash: 根据git stash list的查询结果
+git stash apply xxx
+
+新增一行
 
 
