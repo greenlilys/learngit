@@ -11,11 +11,13 @@ git reset --hard 版本号
 
 放弃工作区的修改：
 git checkout -- 文件名
+git restore <file>
 一种是修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
 一种是已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
 
 撤销暂存区的修改：
 git reset HEAD 文件名
+git restore --staged <file>
 
 删除文件：
 git rm 文件名
@@ -33,17 +35,18 @@ git push -u origin master
 git push -u origin master
 
 创建分支dev：
-git branch 分支名
+git branch <name>
 切换分支：
-git checkout 分支名
-git switch 分支名 （新版本 建议使用）
+git checkout <name>
+git switch <name> （新版本 建议使用）
 
 创建分支并切换到新创建的分支上
-git checkout -b 分支名
-git switch -c 分支名（新版本 建议使用）
+git checkout -b <name>
+git switch -c <name>（新版本 建议使用）
 
 删除分支:
-git branch -d 分支名
+git branch -d <name>
+如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除
 
 查看当前分支：
 git branch
@@ -54,11 +57,13 @@ git merge命令用于合并指定分支到当前分支
 git stash
 查看暂存工作现场列表：
 git stash list
-恢复工作现场并把stash删除
-git stash pop
+恢复工作现场并把stash内容删除
+git stash drop
 恢复指定的stash: 根据git stash list的查询结果
 git stash apply xxx
 
-新增一行
+复制一个特定的提交到当前分支
+git cherry-pich <id>
+
 
 
