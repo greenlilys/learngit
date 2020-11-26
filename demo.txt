@@ -34,9 +34,14 @@ git push -u origin master
 git branch 分支名
 切换分支：
 git checkout 分支名
+git switch 分支名 （新版本 建议使用）
 
 创建分支并切换到新创建的分支上
 git checkout -b dev
+git switch -c 分支名（新版本 建议使用）
+
+删除分支:
+git branch -d 分支名
 
 查看当前分支：
 git branch
