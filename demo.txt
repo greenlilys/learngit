@@ -65,5 +65,7 @@ git stash apply xxx
 复制一个特定的提交到当前分支
 git cherry-pich <id>
 
+新增一行
+
 
 
