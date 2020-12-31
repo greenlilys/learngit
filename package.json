@@ -1,0 +1,37 @@
+{
+  "name": "webpackdemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.pro.js"
+  },
+  "author": "wangDongwen",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "description": "webpack",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/greenlilys/webpackDemo.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "bugs": {
+    "url": "https://github.com/greenlilys/webpackDemo/issues"
+  },
+  "homepage": "https://github.com/greenlilys/webpackDemo#readme"
+}
