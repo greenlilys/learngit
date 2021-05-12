@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6note</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+     console.log(`Hi\n${2+3}!`)
+    console.log(String.raw`Hi\n${2+3}!`)
+    var s1 = "helloworld";
+    console.log(s1.split(''))
+    const arr1 = ['a', 'b'];
+const arr2 = ['c'];
+const arr3 = ['d', 'e'];
+let arr4 =arr1.concat(arr2, arr3)
+console.log(arr1)
+console.log(arr4)
+
+let obj = {"a":1, "b":2};
+let map = new Map(Object.entries(obj));
+console.log(JSON.stringify(Object.entries(obj)))
+
+class Logger {
+    constructor() {
+    this.printName = this.printName.bind(this);
+  }
+  static foo(){
+      console.log("foo")
+  }
+  printName(name = 'there') {
+    this.print(`Hello ${name}`);
+  }
+
+  print(text) {
+    console.log(text);
+  }
+}
+const logger = new Logger();
+const { printName } = logger;
+printName();
+
+class per extends Logger{};
+per.foo()
+
+var arr = [1, [2, 3], 4]
+arr.includes([2, 3])   //false
+console.log(arr.indexOf(4))
+
+
+</script>
+</html>
